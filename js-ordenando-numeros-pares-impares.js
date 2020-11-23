@@ -32,7 +32,7 @@ vImpar.sort((a, b) => a - b).reverse().forEach(function(item) {
 
 
 
-//SOLUÇÃO 2 - Resumo
+//SOLUÇÃO 2 - Resumido
 /*Declaração da variaveis*/
 idxPar = 0;
 idxImpar = 0;
