@@ -39,7 +39,7 @@ Exemplos de Entrada  | Exemplos de Saída
 #### Javascript
 
 ```javascript
-//SOLUÇÃO 1
+//SOLUCAO 1
 /*Declaração da variaveis*/
 var idxPar = 0;
 var idxImpar = 0;
