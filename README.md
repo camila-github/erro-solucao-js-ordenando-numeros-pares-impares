@@ -46,8 +46,8 @@ var idxImpar = 0;
 var vPar = [];
 var vImpar = [];
 
-/* Faz leitura de todos os itens de entrada 
-e chama a função funcParImpar() para validar se o numero é par ou impar.*/
+/* Faz leitura de todos os itens de entrada e chama a 
+função funcParImpar() para validar se o numero é par ou impar.*/
 let totalItems = gets();
 for (var i = 0; i < totalItems; i++) {
     let itens = gets();
@@ -72,7 +72,7 @@ vImpar.sort((a, b) => a - b).reverse().forEach(function(item) {
 });
 
 
-//SOLUÇÃO 2 - Resumido
+//SOLUCAO 2 - Resumido
 /*Declaração da variaveis*/
 idxPar = 0;
 idxImpar = 0;
