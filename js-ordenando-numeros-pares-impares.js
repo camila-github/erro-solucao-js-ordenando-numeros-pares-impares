@@ -23,7 +23,7 @@ vImpar.sort((a, b) => a - b).reverse().forEach(function(item) {
 });
 
 
-//SOLUÇÃO 2 - Resumido
+//SOLUCAO 2 - Resumido
 idxPar = 0;
 idxImpar = 0;
 vPar = [];
