@@ -1,7 +1,7 @@
-## Treinamento Digital Innovation One - Exercicio - Ordenando números pares e impares
+## Exercicio - Ordenando números pares e impares
 
-O exercicio publicado é referente ao treinamento do BOOTCAMP - Desenvolvedor NodeJS - Ordenação e Filtro em JavaScript.
-(https://digitalinnovation.one)
+O exercicio publicado é referente ao treinamento do BOOTCAMP - Desenvolvedor NodeJS - Ordenação e Filtro em JavaScript.(https://digitalinnovation.one)
+
 
 #### Descrição do Desafio:
 
@@ -35,64 +35,61 @@ Exemplos de Entrada  | Exemplos de Saída
 98 |
 
 
-
 #### Javascript
 
 ```javascript
-//SOLUCAO 1
-/*Declaração da variaveis*/
+//SOLUCAO 1 
+/*Declaração das variaveis*/
+let idxPar = 0;
+let idxImpar = 0;
+let arrNumerosPares = [];
+let arrNumerosImpares = [];
+
+/* Faz leitura de todos os itens de entrada e chama a função separaNumerosParesImpares()*/
+const numeroLinhasDeEntrada = gets();
+for (i = 0; i < numeroLinhasDeEntrada; i++) separaNumerosParesImpares(parseInt(gets()));
+
+/*verifica se o numero é par ou impar e adiciona o numero no array*/
+function separaNumerosParesImpares(num) {
+    (num % 2 === 0) ? arrNumerosPares[++idxPar] = num: arrNumerosImpares[++idxImpar] = num;
+}
+
+/*Ordena numeros pares emordem crescente.Imprime o item par, linha por linha*/
+arrNumerosPares.sort((a, b) => a - b).forEach((item) => console.log(item));
+
+/*Ordenar numeros impares em ordem crescente e inverte a ordem crescente para a ordem decrescente.
+Imprime o item impar, linha por linha*/
+arrNumerosImpares.sort((a, b) => a - b).reverse().forEach((item) => console.log(item));
+
+
+//SOLUCAO 2
+/*Declaração das variaveis*/
 var idxPar = 0;
 var idxImpar = 0;
 var vPar = [];
 var vImpar = [];
 
-/* Faz leitura de todos os itens de entrada e chama a 
-função funcParImpar() para validar se o numero é par ou impar.*/
-let totalItems = gets();
+/* Faz leitura de todos os itens de entrada e chama a função separaNumerosParesImpares()*/
+var totalItems = gets();
 for (var i = 0; i < totalItems; i++) {
     let itens = gets();
     funcParImpar(parseInt(itens));
 }
 
-/*valida se o numero é par ou impar e adiciona o numero no array*/
+/*verifica se o numero é par ou impar e adiciona o numero no array*/
 function funcParImpar(n) {
     (n % 2 === 0) ? vPar[++idxPar] = n: vImpar[++idxImpar] = n;
 }
 
-/*Ordenar os numeros pares em ordem crescente.Imprime o item par, linha por linha*/
+/*Ordena numeros pares emordem crescente.Imprime o item par, linha por linha*/
 vPar.sort((a, b) => a - b).forEach(function(item) {
     console.log(item);
 });
 
-/*Ordenar os numeros impares em ordem crescente
-Inverte a ordem crescente para a ordem  decrescente dos numeros impares
+/*Ordenar numeros impares em ordem crescente e inverte a ordem crescente para a ordem decrescente.
 Imprime o item impar, linha por linha*/
 vImpar.sort((a, b) => a - b).reverse().forEach(function(item) {
     console.log(item);
 });
-
-
-//SOLUCAO 2 - Resumido
-/*Declaração da variaveis*/
-idxPar = 0;
-idxImpar = 0;
-vPar = [];
-vImpar = [];
-
-/* Faz leitura de todos os itens de entrada e chama a função funcParImpar()*/
-totalItems = gets();
-for (i = 0; i < totalItems; i++) funcParImpar(parseInt(gets()));
-
-/*valida se o numero é par ou impar e adiciona o numero no array*/
-function funcParImpar(num) {
-    (num % 2 === 0) ? vPar[++idxPar] = num: vImpar[++idxImpar] = num;
-}
-
-/*Ordena numeros pares, ordem crescente.Imprime o item par, linha por linha*/
-vPar.sort((a, b) => a - b).forEach((item) => console.log(item));
-
-/*Ordenar numeros impares ordem crescente e inverte a ordem crescente para a ordem decrescente
-Imprime o item impar, linha por linha*/
-vImpar.sort((a, b) => a - b).reverse().forEach((item) => console.log(item));
 ```
 

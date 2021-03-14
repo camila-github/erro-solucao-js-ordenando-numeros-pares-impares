@@ -1,10 +1,27 @@
-//SOLUCAO 1
+//SOLUCAO 1 
+let idxPar = 0;
+let idxImpar = 0;
+let arrNumerosPares = [];
+let arrNumerosImpares = [];
+
+const numeroLinhasDeEntrada = gets();
+for (i = 0; i < numeroLinhasDeEntrada; i++) separaNumerosParesImpares(parseInt(gets()));
+
+function separaNumerosParesImpares(num) {
+    (num % 2 === 0) ? arrNumerosPares[++idxPar] = num: arrNumerosImpares[++idxImpar] = num;
+}
+
+arrNumerosPares.sort((a, b) => a - b).forEach((item) => console.log(item));
+arrNumerosImpares.sort((a, b) => a - b).reverse().forEach((item) => console.log(item));
+
+
+//SOLUCAO 2
 var idxPar = 0;
 var idxImpar = 0;
 var vPar = [];
 var vImpar = [];
 
-let totalItems = gets();
+var totalItems = gets();
 for (var i = 0; i < totalItems; i++) {
     let itens = gets();
     funcParImpar(parseInt(itens));
@@ -21,21 +38,3 @@ vPar.sort((a, b) => a - b).forEach(function(item) {
 vImpar.sort((a, b) => a - b).reverse().forEach(function(item) {
     console.log(item);
 });
-
-
-//SOLUCAO 2 - Resumido
-idxPar = 0;
-idxImpar = 0;
-vPar = [];
-vImpar = [];
-
-totalItems = gets();
-for (i = 0; i < totalItems; i++) funcParImpar(parseInt(gets()));
-
-function funcParImpar(num) {
-    (num % 2 === 0) ? vPar[++idxPar] = num: vImpar[++idxImpar] = num;
-}
-
-vPar.sort((a, b) => a - b).forEach((item) => console.log(item));
-
-vImpar.sort((a, b) => a - b).reverse().forEach((item) => console.log(item));
